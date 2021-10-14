@@ -10,7 +10,7 @@ public class Loops {
 	// Declaring a constant variable
 	public static final double INTEREST_RATE = 0.05;
 
-	/**
+	/*
 	 * Essentials of Counter-Controlled Repetition Elements Required
 	 * 
 	 * 1. A control variable (or loop counter). 2. the initial value of the control
@@ -115,7 +115,7 @@ public class Loops {
 			System.out.println("i= " + i);
 		}
 
-		/****
+		/*
 		 * Scope of a for Statements Control Variable If the initialisation expression
 		 * in the for header declares the control variable. The control variable can be
 		 * used on in that for statement. It will not exist outside it. The restricted
@@ -154,7 +154,7 @@ public class Loops {
 			System.out.printf("%4d %20.2f\n", year, balance);
 		}
 
-		/****
+		/*
 		 * Formatting Strings with Field Widths and Justification System.out.printf(
 		 * "%5d%, 20.2f\n", year, balance ); outputs the headers for two columns of
 		 * output. The first column displays the year and the second column the amount
@@ -212,7 +212,7 @@ public class Loops {
 			System.out.println("Yes  ... " + exerciseCounter);
 		}
 
-		/****
+		/*
 		 * Some programmers feel that break and continue violate structured programming.
 		 * Since the same effects are achievable with structured programming techniques,
 		 * these programmers do not use break or continue.
