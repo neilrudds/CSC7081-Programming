@@ -177,11 +177,12 @@ public class DataTypes {
 		System.out.printf("The largest value is: %s, its value is: %d\n", strLargest,
 				number1 > number2 ? number1 : number2);
 
-		/**
+		/*
 		 * Switch Statement Switch - fall through Each break statement terminates the
 		 * enclosing switch statement, with out break statements switch blocks fall
 		 * through. See output.
 		 */
+		
 		int number = 2;
 		switch (number) {
 		case 1:
