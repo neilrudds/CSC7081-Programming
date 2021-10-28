@@ -3,6 +3,8 @@
  */
 package Week5;
 
+import java.util.Arrays;
+
 /**
  * @author neilr
  *
@@ -43,7 +45,21 @@ public class TwoDimensionalArrays {
 		System.out.println();
 		
 		printAllElements(creatingTwoDimensionalArrayExercise());
-
+		
+		System.out.println();
+		System.out.println();
+		
+		bubbleSort();
+		
+		System.out.println();
+		System.out.println();
+		
+		dontReinventTheWheel();
+		
+		System.out.println();
+		System.out.println();
+		
+		twoDimensionalArrayInitialiser();
 	}
 	
 	/*
@@ -364,6 +380,56 @@ public class TwoDimensionalArrays {
 	 *   array and no "swaps" are needed (thus the list is in proper order). The
 	 *   bubble sort keeps track of the occurring swaps by the use of a flag.
 	 *   
-	 *   
+	 *   https://www.youtube.com/watch?v=8Kp-8OGwphY
 	 */
+	
+	public static void bubbleSort() {
+		
+		int[] anArray = {4, 6, 3, 1};
+		System.out.println("Unsorted: " + Arrays.toString(anArray));
+		boolean flag = true;
+		int temp;
+		
+		// Go through and check for potential swaps
+		while (flag) {
+			flag = false;
+			for (int loop=0; loop<anArray.length-1; loop++) {
+				// compare values
+				if (anArray[loop] > anArray[loop+1]) {
+					// swap
+					temp = anArray[loop];
+					anArray[loop] = anArray[loop+1];
+					anArray[loop+1] = temp;
+					// swap so set flag to ensure another pass occurs
+					flag = true;
+				}
+			}
+		}
+		System.out.println("Sorted: " + Arrays.toString(anArray));		
+	}
+	
+	/**
+	 * All the code in the previous example (Bubble Sort) could have
+	 * been replaced by this...
+	 */
+	public static void dontReinventTheWheel() {
+		// create an array with values
+		int[] array = {87, 68, 94, 100, 83, 78, 85, 91, 76, 87};
+		System.out.println("Unsorted: " + Arrays.toString(array));
+		Arrays.sort(array);
+		System.out.println("Unsorted: " + Arrays.toString(array));
+	}
+	
+	/**
+	 * 2D array initialiser
+	 */
+	public static void twoDimensionalArrayInitialiser() {
+		// 2D array initialiser
+		int[][] myArray = {{3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7}, {11, 12, 31, 44, 25, 62, 3}};
+		
+		// using the Arrays.toString
+		for (int row=0; row<myArray.length; row++) {
+			System.out.println(Arrays.toString(myArray[row]));
+		}
+	}
 }

@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author neilr
  *
  */
-public class ArraysAverage {
+public class ArraysPractical {
 	
 	public static final double PAY_RATE = 11.50;
 
@@ -50,6 +50,35 @@ public class ArraysAverage {
 		// Practical 5
 		// Ask a user for there name and count the vowels
 		vowelsInString();
+		
+		System.out.println();
+		System.out.println();
+		
+		// Practical 6
+		// Create and array that will be populated with all the even numbers from 1 to 100.  
+		// Output the contents of the array and the total of all the even numbers.
+		printEvenNumbers();
+		
+		System.out.println();
+		System.out.println();
+		
+		// Practical 8
+		// Create a method that will output the contents of an array of ints (of any size) to screen.  
+		printArrayOfAnySize(new int[] {5, 6, 7, 9, 1});
+		
+		System.out.println();
+		System.out.println();
+		
+		// Practical 8
+		// Print statistics for Two assignments
+		evaluateAssigmentMarks();
+		
+		System.out.println();
+		System.out.println();
+		
+		// Practical 9
+		// Print information regarding a quote
+		printQuoteInformation();
 	}
 
 	/**
@@ -122,6 +151,10 @@ public class ArraysAverage {
 		System.out.printf("The average temperature is: %.2f\n", totalTemps / temps.length);
 	}
 	
+	/**
+	 * Prompts the user to enter first name, then the total 
+	 * number of occurrences for each vowel is calculated and displayed.
+	 */
 	public static void vowelsInString() {
 		
 		// Vars
@@ -171,5 +204,123 @@ public class ArraysAverage {
 		System.out.printf("Total O : %d\n", totalO);
 		System.out.printf("Total U : %d\n", totalU);
 		scan.close();
+	}
+	
+	/**
+	 * Method populates an array with all the even numbers from 1 to 100.  
+	 * Outputs the contents of the array and the total of all the even numbers
+	 */
+	public static void printEvenNumbers() {
+		
+		int[] even = new int[50];
+		int nextLocation = 0;
+		int total = 0;
+		
+		for (int i = 1; i <= 100; i++) {
+			if (i%2 == 0) {
+				even[nextLocation] = i;
+				nextLocation++;
+			}
+		}
+		
+		// this is an enhanced for loop or FOR EACH loop
+	    for (int i : even){
+	        total+=i;
+	    }
+	    System.out.println("total is : "+total);
+	}
+	
+	/**
+     * Outputs int array contents to screen
+     * @param myArray
+     */
+	public static void printArrayOfAnySize(int[] inputArray) {
+		for(int i=0; i<inputArray.length; i++) {
+			System.out.printf("Value at index[%d]: %d\n", i, inputArray[i]);
+		}
+	}
+	
+	/**
+     * Method takes as a parameter two assignments marks.
+     * Outputs the average mark of each Assignment (to one decimal place)
+     * The overall average mark in both assignments ie Average A1 + average A2
+     * The assignment with the best average.
+     */
+	public static void evaluateAssigmentMarks() {
+		
+		int[] assignmentOne = {24, 42, 29, 66, 77};
+		int[] assignmentTwo = {79, 68, 31, 22, 42};
+		
+		double averageOne = totalMarks(assignmentOne)/assignmentOne.length;
+		double averageTwo = totalMarks(assignmentTwo)/assignmentTwo.length;
+		
+		System.out.printf("The average mark for Assignment One is: %.1f\n", averageOne);
+		System.out.printf("The average mark for Assignment Two is: %.1f\n", averageTwo);
+		
+		System.out.printf("The overall average is: %.1f\n", (averageOne+averageTwo)/2);
+		
+		if (averageOne > averageTwo) {
+			System.out.println("Assignment One has the best average.");
+		} else if (averageOne < averageTwo) {
+			System.out.println("Assignment Two has the best average.");
+		} else {
+			System.out.println("Both assignments have the same average mark.");
+
+		}
+	}
+	
+    /**
+     * Outputs the total in any given int array
+     * @param inputArray
+     * @return
+     */
+	public static int totalMarks(int[] inputArray) {
+		
+		int totalMarks = 0;
+		
+		for (int i = 0; i<inputArray.length; i++) {
+			totalMarks += inputArray[i];
+		}
+		return totalMarks;
+	}
+	
+	/**
+    * Outputs the following for the famous quote
+    *  The full quote, The number of words, The number of letters
+    *  The smallest word(s), The largest word(s)
+    */
+	public static void printQuoteInformation() {
+
+		int noWords = 0;
+		int noLetters = 0;
+		String smallestWord;
+		String largestWord;
+		
+		String[] myQuote = {"Continuous", "effort", "not", "strength", "nor",
+				"intelligence", "is", "the", "key", "for", "unlocking", "our", "potential"};
+		
+		smallestWord = myQuote[0];
+		largestWord = myQuote[0];
+		
+		for (int i=0; i<myQuote.length; i++) {
+			System.out.print(myQuote[i] + " ");
+			noWords++;
+			noLetters+=myQuote[i].length();
+			
+			if (smallestWord.length() > myQuote[i].length()) {
+				smallestWord = myQuote[i];
+			}
+			
+			if (largestWord.length() < myQuote[i].length()) {
+				largestWord = myQuote[i];
+			}
+		}
+		
+		System.out.println("");
+    	System.out.println("Stats ___________________________");
+    	System.out.println("Number of words   : "+ noWords);
+    	System.out.println("Number of letters : "+ noLetters);
+    	System.out.println("Largest word : "+ largestWord);
+    	System.out.println("Smallest word : "+ smallestWord);
 	}
 }
