@@ -1,5 +1,10 @@
 package Week14;
 
+/***
+ * Polymorphism - OOP
+ * @author neilr
+ */
+
 public class Lion extends Animal {
 	
 	@Override

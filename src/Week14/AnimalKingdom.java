@@ -18,6 +18,7 @@ public class AnimalKingdom extends Animal {
 
 		polymorphicProcessing();
 		argumentProcessing();
+		casting();
 		
 	}
 	
@@ -65,5 +66,37 @@ public class AnimalKingdom extends Animal {
 	
 	public static void doDolittle(Animal animal) {
 		animal.makeNoise();
+	}
+
+	public static void casting(){
+
+		Dog dog = new Dog(); 
+		dog.setLicenceNumber(1234);
+
+		/**
+		* Casting from a subclass to a superclass is called upcasting
+		*(doing a cast from a derived class to a more general base class).
+		*/
+
+		Animal animal = dog;
+
+		/**
+		* There is no need to explicitly cast up the base case... the compiler knows that Dog is an Animal and doesn’t display any errors
+		* but now you can't access the dog specific methods, because dog has its object reference defined as Animal then it is only possible
+		* to directly access the Animal methods - not the dog !
+		*/
+
+		// But if you cast it down to a Dog reference (Downcasting) then...
+
+		Dog anotherDog = (Dog) animal;
+		System.out.println(anotherDog.getLicenceNumber()); // dog specific method
+
+		// You may use the instanceof operator before downcasting to check if the object belongs to the specific type:#
+		
+		if (animal instanceof Dog) {
+			Dog yetAnotherDog = (Dog) animal;
+			System.out.println(yetAnotherDog.getLicenceNumber());
+		}
+			
 	}
 }

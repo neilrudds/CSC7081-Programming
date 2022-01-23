@@ -2,6 +2,7 @@ package Week13;
 
 /***
  * Extends the Abstract Class Employee and overrides the calculateSalary method
+ * Implements an an abstract method
  * @author neilr
  */
 

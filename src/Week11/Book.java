@@ -1,7 +1,7 @@
 package Week11;
 
 /**
- * Cunstructor - Exercise 1
+ * Constructor - Exercise 1
  * 
  * @author neilr
  *
