@@ -21,14 +21,14 @@ public class TabletsAreUsSolution {
         tablets.add(t5);
 
         // show all in stock
-        //showAllDeatails(tablets);
+        showAllDeatails(tablets);
         // exercising a few searches
         // 1. all screen sizes > 10 inches in size
-        //showAllDeatails(searchBySize(tablets, 10.0));
+        showAllDeatails(searchBySize(tablets, 10.0));
         // 2. all Apple products (over priced!)
-        //showAllDeatails(searchByManufacturer(tablets, "Apple"));
+        showAllDeatails(searchByManufacturer(tablets, "Apple"));
         // 3. all Android tablets
-        //showAllDeatails(searchByOpSystem(tablets, true));
+        showAllDeatails(searchByOpSystem(tablets, true));
         // 4. note search .. e.g. by key word search (note this is case sensitive)
         showAllDeatails(searchByNotesKeyWord(tablets, "Kids"));
         showAllDeatails(searchByNotesKeyWord(tablets, "NASA"));
