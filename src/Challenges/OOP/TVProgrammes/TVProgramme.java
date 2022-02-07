@@ -56,6 +56,15 @@ public class TVProgramme {
         this.avgAudience = avgAudience;
     }
 
+    public void displayDetails() {
+        System.out.println("----- Programme Details -----");
+        System.out.printf("Programme Name: %s\n", programme);
+        System.out.printf("Broadcaster: %s\n", broadcaster);
+        System.out.printf("Average Audience: %.1f\n", avgAudience);
+        System.out.printf("Rating: %d\n", rating);
+        System.out.println();
+    }
+
     @Override
     public String toString() {
         return "TVProgramme [programme=" + programme + ", broadcaster=" + broadcaster + ", avgAudience=" + 
