@@ -6,8 +6,12 @@ package Week13;
  */
 
 public class EBookReader {
+
+	/**
+	 * Default Constructor
+	 */
 	public EBookReader() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public static void main(String[] args) {

@@ -10,8 +10,11 @@ public class Lecturer extends Employee {
 	
 	private String school;
 
+	/**
+	 * Default Constructor
+	 */
 	public Lecturer() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	/**

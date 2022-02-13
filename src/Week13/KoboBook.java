@@ -6,8 +6,12 @@ package Week13;
  */
 
 public class KoboBook extends EBook {
+
+	/**
+	 * Default Constructor
+	 */
 	public KoboBook() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public KoboBook(String title) {

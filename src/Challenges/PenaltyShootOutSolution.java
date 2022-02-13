@@ -124,7 +124,6 @@ public class PenaltyShootOutSolution {
 		try {
 			Thread.sleep(millisecs);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
