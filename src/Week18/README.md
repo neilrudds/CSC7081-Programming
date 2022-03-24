@@ -11,7 +11,7 @@
 
 - Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).
 
-# What is the Collections Framework
+# What is the Collections framework
 
 - A collections framework is a unified architecture for representing and manipulating collections. All collections frameworks contain the following:
 
