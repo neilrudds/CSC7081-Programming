@@ -11,7 +11,7 @@
 
 - Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).
 
-# What is the Collections framework
+# What is the Collections Framework
 
 - A collections framework is a unified architecture for representing and manipulating collections. All collections frameworks contain the following:
 
@@ -97,7 +97,7 @@
 
 - It is an Interface – you can’t instantiate it.
 
-- The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum    generality is desired.
+- The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum generality is desired.
 
 - Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. 
 
@@ -141,6 +141,66 @@
 
     - Range-view — The sublist method performs arbitrary range operations on the list.
 
+# List
+```
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class ListsExample1 {
+    
+    public static void main (String[] args) {
+
+        // create a list (of type ArrayList)
+        List<String> arrList = new ArrayList<String>();
+        arrList.add("Belfast");
+        arrList.add("Dublin");
+
+        // create a list (of type LinkedList)
+        List<String> lnkList = new LinkedList<String>();
+        lnkList.add("London");
+        lnkList.add("Cardiff");
+
+    }
+}
+```
+
+# List - Parameter Passing (Programming to Interfaces)
+```
+    /**
+     * Displays all elements in an ArrayList of type String
+     * @param arrayList
+     */
+    public static void showAll(ArrayList<String> arrayList) {
+        // foreach
+        for (String s : arrayList) {
+            System.out.println(s);
+        }
+    }
+
+    /**
+     * Displays all elements in a List of type string
+     * @param list
+     */
+    public static void showAll(List<String> list) {
+        // foreach
+        for (String s : list) {
+            System.out.println(s);
+        }
+    }
+
+    /**
+     * Displays all elements in the collection of type string
+     * @param collection
+     */
+    public static void showAll(Collection<String> collection) {
+        // foreach
+        for (String s : collection) {
+            System.out.println(s);
+        }
+    }
+```
+
 - LinkedList and ArrayList are two different implementations of the List interface. 
 
 - LinkedList implements it with a doubly-linked list.
@@ -148,11 +208,18 @@
 ```
  ____        ____        ____        ____        ____        ____
 | 25 | <--> | 12 | <--> | 30 | <--> | 10 | <--> | 36 | <--> | 15 |
+
 ```
  
 - ArrayList Implements it with a dynamically resizing array.
 
 ```
+               8
+               |
+ __________________________________
+| 34 | 2 | 4 | 6 | 87 | 5 | 56 |   |
+               |   ^|   ^|  ^|   ^
+               |___||___||__||___|
 ```
 
 - ArrayList vs. LinkedList Performance
@@ -161,24 +228,46 @@
 
     - ArrayList allows fast random read access, so you can grab any element in constant time. But adding or removing from anywhere but the end requires shifting all the latter elements over, either to make an opening or fill the gap. 
 
-- List - exercise
+# List - exercise
 
 - Remove duplicates exercise
 
 - Create an arraylist and a linked list.  Populate both lists with 10 random numbers (value range 1-5)
 
-- Complete the following method …
+- Complete the following method…
 
 ```
 public static void removeDuplicates(Collection<Integer> originalList,  Collection<Integer> listToRemove)
 ```
+
 - The originalList passed as a parameter will have any items removed from it that exist in the second list (listToRemove)
+
+Two options:
+```
+    /**
+     * Removes occurances of values in the toRemove list from the inputList
+     * @param inputList
+     * @param toRemove
+     */
+    public static void removeMatches(List<Integer> inputList, List<Integer> toRemove) {
+        /*for(Integer val : toRemove){
+            while (inputList.contains(val)){
+                inputList.remove(val);
+            }
+        }*/
+        inputList.removeAll(toRemove);
+    }
+```
 
 - LinkedList  - swap elements
 
     - Create a method to swap elements in an List, given the following method signature to reorder the output to  
 
 ```
+import java.util.LinkedList;
+
+public class LinkedListExample {
+
     public static void main(String[] args) {
 
 		LinkedList<String> linkedList = new LinkedList<String>();
@@ -189,7 +278,6 @@ public static void removeDuplicates(Collection<Integer> originalList,  Collectio
 		
 		// not quite right ? 
 		System.out.println(linkedList.toString());
-		
 		
 		swap(linkedList, 1, 2);
 		System.out.println(linkedList.toString());
@@ -204,6 +292,7 @@ public static void removeDuplicates(Collection<Integer> originalList,  Collectio
 		list.set(position2, tmp);
 	}
 
+}
 ```
 
 # Collections Framework – Algorithms. Collections class 
@@ -300,7 +389,7 @@ public class CollectionsClassSort {
 
 # Collections class - reverse sort
 
-    -The example introduces the Comparator interface, which is used for sorting a Collection’s elements in a different order. The call to the Collection class sort method is to order the List in descending order. The static Collections method reverseOrder returns a Comparator object that orders the collection’s elements in reverse order.
+- The example introduces the Comparator interface, which is used for sorting a Collection’s elements in a different order. The call to the Collection class sort method is to order the List in descending order. The static Collections method reverseOrder returns a Comparator object that orders the collection’s elements in reverse order.
 
 ```
 import java.util.Arrays;
@@ -533,3 +622,309 @@ A hash table stores information by using a mechanism called hashing. In hashing,
 
 The hash code is then used as the index at which the data associated with the key is stored. The transformation of the key into its hash code is performed automatically.
 
+# Sorted Set
+
+```
+public class SortedSetExample {
+
+    public static void main(String[] args) {
+
+        // create a sorted set implementation
+        SortedSet<String> set = new TreeSet<String>();
+
+        // add the elements
+        set.add("Zidane");
+        set.add("Messi");
+        set.add("Pele");
+
+        // Show all - Naturally ordered
+        for (String name:set) {
+            System.out.println(name);
+        }
+
+        // Show first and last
+        System.out.println("First:" + set.first());
+        System.out.println("Last:" + set.last());
+
+        // remove an element
+        set.remove("Messi");
+        // show now...
+        for(String name:set) {
+            System.out.println(name);
+        }
+    }
+}
+```
+
+# Queue
+
+- A collection used to hold multiple (non unique) elements prior to processing. Besides basic Collection operations, a Queue provides additional insertion, extraction, and inspection operations.
+
+- Queues typically, but do not necessarily, order elements in a FIFO (first-in, first-out) manner.
+
+- Typically, insertions are made at the back of a queue and deletions are made from the front.
+
+- The queue retrieval operations — poll, remove, peek, and element — access the element at the head of the queue
+
+- Queue Implementations
+
+    - LinkedList implements the Queue interface, providing first in, first out (FIFO) queue operations for add, poll, and so on.
+
+    - The PriorityQueue class is a priority queue based on the heap data structure. This queue orders elements according to the order specified at construction time, which can be the elements' natural ordering or the ordering imposed by an explicit Comparator.
+
+```
+public class QueueExample2 {
+
+    public static void main(String[] args) {
+
+        // set the start time
+        int time = 10;
+
+        // create an implementation of a queue
+        Queue<Integer> queue = new LinkedList<Integer>();
+
+        // populate the queue with the items between start and 0
+        for (int i = time; i >= 0; i--) {
+            queue.add(i);
+        }
+
+        System.out.println("Queue items: " + queue.toString());
+
+        // remove each item and delay next removal by 1 second
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
+            Thread.sleep(1000);
+        }
+    }
+}
+```
+
+# Queue Exercise
+
+- Create an ArrayList of Strings to hold the names of five family members i.e. their names.
+
+- Convert to a queue
+
+- De-queue each name in 2 second intervals.
+
+```
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class QueueExercise {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+
+		// populate with the names of six family members
+		list.add("Aidan");
+		list.add("Claire");
+		list.add("Niamh");
+		list.add("Una");
+		list.add("Annie");
+
+		Queue<String> myQ = new LinkedList<>(list);
+
+		// dequeue every 2 seconds
+		while (!myQ.isEmpty()) {
+			System.out.println(myQ.poll());
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+}
+```
+
+# Queue (PriorityQueue Class)
+
+ - PriorityQueue: The head of the priority queue is the least element based on the natural ordering or comparator based ordering, if there are multiple objects with same ordering, then it can poll any one of them randomly. When we poll (peek) the queue, it returns the head object from the queue.
+
+ ```
+ // Create the queue
+ Queue<Double> q = new PriorityQueue<Double>();
+
+ // Add in any order
+ q.add(10.1);
+ q.add(3.3);
+ q.add(5.2);
+
+ System.out.println("Queue order : " + q.toString());
+
+ int loop = 1;
+ while (loop <= q.size()) {
+     // view and then remove each element (by order)
+     System.out.println("Peek " + q.peek());
+     q.remove();
+ }
+ ```
+
+ Note : toString() method, uses the iterator, which is not guaranteed to respect the natural ordering. "The Iterator provided in method iterator() is not guaranteed to traverse the elements of the priority queue in any particular order.“
+
+# PriorityQueue Exercise
+
+ - Update the Queued exercise to order the names in the queue before de-queuing
+
+ ```
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class PriorityQ {
+
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+
+		// populate with the names of six family members
+		list.add("Aidan");
+		list.add("Claire");
+		list.add("Niamh");
+		list.add("Una");
+		list.add("Annie");
+
+		Queue<String> myQ = new PriorityQueue<>(list);
+
+		// dequeue every 3 seconds
+		while (!myQ.isEmpty()) {
+			System.out.println("Dequeue .. ");
+			System.out.println(myQ.poll());
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Queue empty");
+	}
+}
+ ```
+
+ # Map
+
+  - Maps associate keys to values.
+  
+  - The keys in a Map must be unique, but the associated values need not be. If a Map contains both unique keys and unique values, it's said to implement a one-to-one mapping. If only the keys are unique, the Map is said to implement a many-to-one mapping - many keys can map to one value.
+
+  - Maps differ from Sets in that Maps contain keys and values, whereas Sets contain only values.
+
+  - Three of the several classes that implement interface Map are Hashtable, HashMap and TreeMap.
+
+  - Hashtables and HashMaps store elements in hash tables.
+
+  - TreeMaps store elements in trees.
+
+  - The HashMap class is roughly equivalent to Hashtable, except that the HashMap is unsynchronized and permits nulls.
+
+- Creating a HashMap and adding a key value pair:
+```
+String sentence = "to be or not to be";
+
+// create the HashMap
+Map<String, Integer> myMap = new HashMap<String, Integer>();
+
+// tokenize the input
+String[] tokens = sentence.split(" ");
+
+// processing input text
+for (String token : tokens) {
+    if (myMap.containsKey(token)) {
+        int count = myMap.get(token);
+        // increase the count for this word
+        myMap.put(token, count + 1);
+    } else {
+        // add new word with a count of 1 to map
+        myMap.put(token, 1);
+    }
+}
+```
+
+- Retrieve all keys and values:
+```
+System.out.println("\nMap contains:\nKey\t\tValue");
+
+// display all map content
+for (String key : myMap.keySet()) {
+    System.out.printf("%-10s%10d \n", key, myMap.get(key));
+}
+```
+
+- Retrieve a value based on a key
+```
+if (myMap.containsKey("not")) {
+    System.out.println("Value for key \"not\" : " + myMap.get(not));
+} else {
+    System.out.println("Key not found");
+}
+```
+
+# Sorted Map
+
+ - Interface Stoted Map extends Map and maintains it's keys in sorted order - either the elements' natural order or an order specified by a Comparator. Class TreeMap implements SortedMap.
+
+ ```
+ import java.util.Map;
+ import java.util.TreeMap;
+
+ public class SortedMapExample {
+
+     public static void main(String[] args) {
+
+         // create a TreeMap (Implements the SortedMap interface)
+         Map<Integer, String> mySortedMap = new TreeMap<Integer, String>();
+
+         // add the keys and values
+         mySortedMap.put(4, "four");
+         mySortedMap.put(1, "one");
+         mySortedMap.put(3, "three");
+         mySortedMap.put(2, "two");
+
+         // get the keyset and output the values
+         for (Integer key : mySortedMap.keySet()) {
+             System.out.printf("%10d%10s \n", key, mySortedMap.get(key));
+         }
+
+     }
+ }
+ ```
+
+ # Map Exercise
+
+  - Create a Map to store a telephone contacts list.
+
+  ```
+    import java.util.HashMap;
+    import java.util.Map;
+
+    public class Mapper {
+
+        public static void main(String[] args) {
+
+            Map<String, String> contacts = new HashMap<>();
+            
+            contacts.put("Aidan", "07773939393");
+            contacts.put("Annie", "07722222222");
+            contacts.put("Una", "07788888888");
+            
+            // get number
+            System.out.println("Number for Annie "+contacts.get("Annie"));
+            
+            // get all
+            for (String key : contacts.keySet()){
+                System.out.println(key +" " +contacts.get(key)  );
+            }
+
+        }
+
+    }
+
+  ```
