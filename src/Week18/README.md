@@ -11,7 +11,7 @@
 
 - Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).
 
-# What is the Collections framework
+# What is the Collections Framework
 
 - A collections framework is a unified architecture for representing and manipulating collections. All collections frameworks contain the following:
 
@@ -295,7 +295,7 @@ public class LinkedListExample {
 }
 ```
 
-# Collections Framework – Algorithms. Collections class 
+# Collections Framework – Algorithms, Collections class 
 
 - Most polymorphic algorithms in the Collections class apply specifically to List. 
 - Having all these algorithms at your disposal makes it very easy to manipulate lists. 
@@ -588,10 +588,12 @@ public class TestSet {
 
     public static void main(String[] args) {
 
-        // create amd display a List<String>
-        String colors = { "red", "white", "blue", "green", "gray", "orange",
+        // create and display a List<String>
+        String[] colors = { "red", "white", "blue", "green", "gray", "orange",
              "tan", "white", "cyan", "peach", "gray", "orange" };
+        
         List<String> list = Arrays.asList(colors);
+        
         System.out.printf("List: %s\n", list);
 
         // eliminate duplicates then print the unique values
@@ -626,7 +628,6 @@ The hash code is then used as the index at which the data associated with the ke
 
 ```
 public class SortedSetExample {
-
     public static void main(String[] args) {
 
         // create a sorted set implementation
@@ -725,7 +726,6 @@ public class QueueExercise {
 		list.add("Niamh");
 		list.add("Una");
 		list.add("Annie");
-
 		Queue<String> myQ = new LinkedList<>(list);
 
 		// dequeue every 2 seconds
@@ -812,7 +812,7 @@ public class PriorityQ {
  # Map
 
   - Maps associate keys to values.
-  
+
   - The keys in a Map must be unique, but the associated values need not be. If a Map contains both unique keys and unique values, it's said to implement a one-to-one mapping. If only the keys are unique, the Map is said to implement a many-to-one mapping - many keys can map to one value.
 
   - Maps differ from Sets in that Maps contain keys and values, whereas Sets contain only values.
@@ -823,7 +823,7 @@ public class PriorityQ {
 
   - TreeMaps store elements in trees.
 
-  - The HashMap class is roughly equivalent to Hashtable, except that the HashMap is unsynchronized and permits nulls.
+  - The HashMap class is roughly equivalent to Hashtable, except that the HashMap is unsynchronized and permits nulls.
 
 - Creating a HashMap and adding a key value pair:
 ```
@@ -849,6 +849,7 @@ for (String token : tokens) {
 ```
 
 - Retrieve all keys and values:
+
 ```
 System.out.println("\nMap contains:\nKey\t\tValue");
 
@@ -859,6 +860,7 @@ for (String key : myMap.keySet()) {
 ```
 
 - Retrieve a value based on a key
+
 ```
 if (myMap.containsKey("not")) {
     System.out.println("Value for key \"not\" : " + myMap.get(not));
@@ -901,7 +903,7 @@ if (myMap.containsKey("not")) {
 
   - Create a Map to store a telephone contacts list.
 
-  ```
+```
     import java.util.HashMap;
     import java.util.Map;
 
@@ -927,4 +929,4 @@ if (myMap.containsKey("not")) {
 
     }
 
-  ```
+```
