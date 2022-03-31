@@ -25,9 +25,7 @@ public class ListExerciseStarter {
 
         System.out.println("Original List: " + arList.toString());
         System.out.println("To Remove List: " + linkList.toString());
-        //removeMatches(arList, linkList);
-        //actuallyRemoveDuplicates(arList);
-        actuallyRemoveDuplicatesHashSet(arList);
+        removeMatches(arList, linkList);
         System.out.println("Original List with values removed: " + arList.toString());
         
         System.out.println("end");
@@ -40,13 +38,11 @@ public class ListExerciseStarter {
      * @param toRemove
      */
     public static void removeMatches(List<Integer> inputList, List<Integer> toRemove) {
-        // Removing this way will only remove the first occurance
         /*for(Integer val : toRemove){
             while (inputList.contains(val)){
                 inputList.remove(val);
             }
         }*/
-        // This will remove all occurances
         inputList.removeAll(toRemove);
     }
 
@@ -62,7 +58,7 @@ public class ListExerciseStarter {
         //System.out.println("Identify uniques: " + unique.toString());
     }
 
-    public static void actuallyRemoveDuplicatesHashSet(List<Integer> toModify) {
+    public static void actuallyRemoveDuplicates2(List<Integer> toModify) {
         Set<Integer> intSet = new HashSet<Integer>(toModify);
         toModify.clear();
         toModify.addAll(intSet);

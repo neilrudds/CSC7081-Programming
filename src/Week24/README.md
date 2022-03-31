@@ -41,13 +41,13 @@ Two main ways to do it in Java…
 
     - Java has a class called Thread. By extending this class you get all it’s functionality.
 
-    '''
+    ```
     package ThreadsExamples;
 
     public class ExtendingThreadExample extends Thread {
 
     }
-    '''
+    ```
 
     - This class is a valid Thread but does nothing. You need to add a run method.
 
@@ -61,7 +61,7 @@ Two main ways to do it in Java…
     - To start the Thread you call start() not run()
     - run() method is what is executed by the thread after you call start().
 
-    '''
+    ```
     public class ExtendingThreadExample extends Thread {
 
         // Inderits the start() method from the Thread class
@@ -72,9 +72,9 @@ Two main ways to do it in Java…
             } while(true);
         }
     }
-    '''
+    ```
 
-    '''
+    ```
     package ThreadsExamples;
 
     public class ExtendingThreadTest {
@@ -90,11 +90,11 @@ Two main ways to do it in Java…
 
         }
     }
-    '''
+    ```
 
     - Output, This will vary each time the class runs…
 
-    '''
+    ```
     My first thread.... running away....
     My first thread.... running away....
     Main thread. Running away....
@@ -107,7 +107,7 @@ Two main ways to do it in Java…
     My first thread.... running away....
     Main thread. Running away....
     Main thread. Running away....
-    '''
+    ```
 
 # Implementing the Runnable interface
 
@@ -116,7 +116,7 @@ Two main ways to do it in Java…
 - Better to implement an Interface…
 - Bypass the Thread class (which implements the Runnable interface) and implement Runnable yourself.
 
-'''
+```
 package ThreadsExamples;
 
 public class ImplementingRunnableExample implements Runnable {
@@ -129,13 +129,13 @@ public class ImplementingRunnableExample implements Runnable {
     }
 
 }
-'''
+```
 
 - But, you don’t have the start method anymore (that’s part of the Thread class).
 - Answer – the Thread class takes as an argument in it’s constructor an Object of type Runnable. 
 - By passing your class which has the run method (that implements runnable) to the Thread class you can delegate the Thread class to do some work for you… in this case use it’s start(). (Example of The Delegation Design Pattern in OO)
 
-'''
+```
 package ThreadsExample;
 
 public class ImplementingRunnableTest {
@@ -157,13 +157,13 @@ public class ImplementingRunnableTest {
     }
 
 }
-'''
+```
 
 # Naming of Threads
 
 When you create a thread you can give it a name. The name can help you distinguish different threads from each other. For instance, if multiple threads write to System.out it can be handy to see which thread wrote the text.
 
-'''
+```
 public class ThreadOutputsName implements Runnable {
 
     @Override
@@ -172,9 +172,9 @@ public class ThreadOutputsName implements Runnable {
         System.out.println("Thread " + name + " started");
     }
 }
-'''
+```
 
-'''
+```
 package ThreadsExamples;
 
 public class ThreadNames {
@@ -186,13 +186,13 @@ public class ThreadNames {
         thread.start();
     }
 }
-'''
+```
 
 // Thread My Wee Thread started
 
 # Starting multiple threads
 
-'''
+```
 public class ThreadOutputsName implements Runnable {
 
     public int number = 0;
@@ -203,9 +203,9 @@ public class ThreadOutputsName implements Runnable {
     }
 
 }
-'''
+```
 
-'''
+```
 public class MultipleThreadsExample {
 
     public MultipleThreadsExample() {
@@ -224,7 +224,7 @@ public class MultipleThreadsExample {
         }
     }
 }
-'''
+```
 
 - Note that even if the threads are started in sequence (0,1, 2, 3 etc.) they may not execute sequentially, meaning thread 0 may not be the first thread to write its name to System.out.
 
@@ -234,7 +234,7 @@ public class MultipleThreadsExample {
 
 - This order does not have to be the same order in which they were started.
 
-'''
+```
 main
 Thread 0 started
 Thread 3 started
@@ -249,7 +249,7 @@ Thread 9 started
 Thread 11 started
 Thread 2 started
  ...........................
-'''
+```
 
 # Thread States
 
@@ -263,7 +263,7 @@ Thread 2 started
 - This is an efficient means of making processor time available to the other threads of an application or other applications that might be running on a computer system.
 - The sleep method can also be used for pacing.
 
-'''
+```
 public class SleepExample {
 
     public static void main(String[] args) {
@@ -285,7 +285,7 @@ public class SleepExample {
         }
     }
 }
-'''
+```
 
 # Thread Interrupt
 
@@ -293,7 +293,7 @@ public class SleepExample {
 
 - A thread sends an interrupt by invoking interrupt on the Thread object for the thread to be interrupted.
 
-'''
+```
 public class SleepyThread implements Runnable {
 
     @Override
@@ -307,9 +307,9 @@ public class SleepyThread implements Runnable {
         }
     }
 }
-'''
+```
 
-'''
+```
 public class StoppingAThreadExample {
 
     public static void main(String[] args) {
@@ -337,9 +337,9 @@ public class StoppingAThreadExample {
         System.out.println("Main finished");
     }
 }
-'''
+```
 
-'''
+```
 Main thread - going for a small sleep
 Sleepy Thread - about to sleep
 Main thread - awake
@@ -347,11 +347,11 @@ Main thread - checking if sleepyThread is awake
 Main thread - sleepyThread sleeping. Going to interrupt it!
 Sleepy Thread - Interrupted!
 Main finished
-'''
+```
 
 - Checking if thread has been interrupted and taking appropriate action
 
-'''
+```
 public class ThreadInplExample implements Runnable {
 
     @Override
@@ -369,13 +369,13 @@ public class ThreadInplExample implements Runnable {
         System.out.println(Thread.currentThread().getName() + " : ended");
     }
 }
-'''
+```
 
 # Sharing a resource – a problem for Threads
 
 - Two threads that access the same object. For example a Bank Account class.
 
-'''
+```
 package ThreadSync;
 
 public class BankAccount {
@@ -390,13 +390,13 @@ public class BankAccount {
         this.balance -= value;
     }
 }
-'''
+```
 
 # Syncing a Thread
 
 - Program run – inconsistent results…
 
-'''
+```
 Withdraw : making a withdrawal
 Withdraw : balance after withdrawal : 120
 Withdraw : making a withdrawal
@@ -424,7 +424,7 @@ Deposit : balance 100
 Deposit : making a deposit
 Deposit : balance 110
 Main Thread Balance : 110
-'''
+```
 
 # Race Conditions & Critical Sections
 
@@ -434,7 +434,7 @@ section that leads to race conditions is called a critical section.
 - Race conditions can be avoided by proper thread synchronization in critical sections. 
 - A Java synchronized block marks a method or a block of code as synchronized. Java synchronized blocks can be used to avoid race conditions
 
-'''
+```
 package ThreadSync;
 
 public class BankAccount {
@@ -449,4 +449,4 @@ public class BankAccount {
         this.balance -= value;
     }
 }
-'''
+```
