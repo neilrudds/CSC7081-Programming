@@ -6,20 +6,20 @@ import java.util.List;
 public class SwapDemo {
     public static void main(String[] args) {
 
-		LinkedList<String> linkedList = new LinkedList<String>();
-		linkedList.add("I");
-		linkedList.add("dream");
-		linkedList.add("have");
-		linkedList.add("a");
+		LinkedList<String> wordList = new LinkedList<String>();
+		wordList.add("I");
+		wordList.add("dream");
+		wordList.add("have");
+		wordList.add("a");
 		
 		// not quite right ? 
-		System.out.println(linkedList.toString());
+		System.out.println(wordList.toString());
 		
-		
-		swap(linkedList, 1, 2);
-		System.out.println(linkedList.toString());
-		swap(linkedList, 2, 3);
-		System.out.println(linkedList.toString());
+		// Swap words
+		swap(wordList, 1, 2);
+		System.out.println(wordList.toString());
+		swap(wordList, 2, 3);
+		System.out.println(wordList.toString());
 		
 	}
 

@@ -337,3 +337,5 @@ System.out.println(nums.toString());
     return arrayList; 
  }
 ```
+
+- 8 Queens Problem... Look this up!
