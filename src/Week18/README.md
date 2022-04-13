@@ -141,6 +141,33 @@
 
     - Range-view — The sublist method performs arbitrary range operations on the list.
 
+- With iterator you can move only forward, but with List Iterator you can move back also while reading the elements.
+
+- With List Iterator you can obtain the index at any point while traversing, which is not possible with iterators.
+
+- With iterator you can check only for next element available or not, but in list iterator you can check previous and next elements.
+
+- With list iterator you can add new element at any point of time, while traversing. Not possible with iterator.
+
+- With list iterator you can modify an element while traversing, which is not possible with iterator.
+
+```
+List<Integer> list1 = new ArrayList<>();
+list1.add(1);
+list1.add(2);
+list1.add(3);
+
+// List iterator
+ListIterator<Integer> listIt = list1.listIterator(list1.size());
+
+// show last item
+while (listIt.hasPrevious()){
+    System.out.println(listIt.previous());
+}
+
+```
+
+
 # List
 ```
 import java.util.ArrayList;
@@ -317,6 +344,9 @@ public class LinkedListExample {
     frequency     | Calculates how many collection elements are equal to the specified element.
     disjoint      | Determines whether two collections have no elements in common.
 ```
+
+http://docs.oracle.com/javase/8/docs/api/java/util/Collections.html
+
 - Summary
 
 ```
@@ -576,6 +606,9 @@ public class CollectionsClassFrequency {
     - HashSet stores its elements in a hash table (better performance, constant time additions, removal, contains )
     
     - TreeSet stores its elements in a tree. (useful for potential sorting)
+
+- Hash table > see http://www.youtube.com/watch?v=MfhjkfocRR0
+- Tree Structure (Binary) > http://www.youtube.com/watch?v=l0Z3E1n8kmk
 
 ```
 import java.util.Arrays;

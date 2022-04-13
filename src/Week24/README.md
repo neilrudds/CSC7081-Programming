@@ -428,8 +428,7 @@ Main Thread Balance : 110
 
 # Race Conditions & Critical Sections
 
-- The situation where two threads compete for the same resource, where the sequence in which the resource is accessed is significant, is called race condition. A code 
-section that leads to race conditions is called a critical section.
+- The situation where two threads compete for the same resource, where the sequence in which the resource is accessed is significant, is called race condition. A  code section that leads to race conditions is called a critical section.
 - In the previous example the method deposit() and withdraw() are critical sections, leading to race conditions.
 - Race conditions can be avoided by proper thread synchronization in critical sections. 
 - A Java synchronized block marks a method or a block of code as synchronized. Java synchronized blocks can be used to avoid race conditions
