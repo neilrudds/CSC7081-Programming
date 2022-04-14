@@ -1,0 +1,574 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AsciiConverter",
+            "request": "launch",
+            "mainClass": "Challenges.AsciiConverter",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryFinary",
+            "request": "launch",
+            "mainClass": "Challenges.BinaryFinary",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CodeBreaker",
+            "request": "launch",
+            "mainClass": "Challenges.CodeBreaker",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileReadingAndArrayLists",
+            "request": "launch",
+            "mainClass": "Challenges.FileReadingAndArrayLists",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FizzBuzz",
+            "request": "launch",
+            "mainClass": "Challenges.FizzBuzz",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch HiddenMessage",
+            "request": "launch",
+            "mainClass": "Challenges.HiddenMessage",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch SongStats",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.CSV.SongStats",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CardSharpDriver",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.CardSharp.CardSharpDriver",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch StarterApp",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.CountriesOfTheWorld.StarterApp",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExamResultProcessor",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.MScGradProcessor.ExamResultProcessor",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch TabletsAreUsSolution",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.OnlineShop.TabletsAreUsSolution",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PizzaShop",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.Pizza.PizzaShop",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch TVProgrammesSolution",
+            "request": "launch",
+            "mainClass": "Challenges.OOP.TVProgrammes.TVProgrammesSolution",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PenaltyShootOut",
+            "request": "launch",
+            "mainClass": "Challenges.PenaltyShootOut",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PenaltyShootOutSolution",
+            "request": "launch",
+            "mainClass": "Challenges.PenaltyShootOutSolution",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PubQuiz",
+            "request": "launch",
+            "mainClass": "Challenges.PubQuiz",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReadAndSplitCSV",
+            "request": "launch",
+            "mainClass": "Challenges.ReadAndSplitCSV",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReadMyBook",
+            "request": "launch",
+            "mainClass": "Challenges.ReadMyBook",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch SquareMeUp",
+            "request": "launch",
+            "mainClass": "Challenges.SquareMeUp",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataTypes",
+            "request": "launch",
+            "mainClass": "Week1.DataTypes",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "Week1.HelloWorld",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch BankManager",
+            "request": "launch",
+            "mainClass": "Week10.BankManager",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch BuilderHelperApp",
+            "request": "launch",
+            "mainClass": "Week10.BuilderHelperApp",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalculatorUnitTester",
+            "request": "launch",
+            "mainClass": "Week10.CalculatorUnitTester",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CarFactory",
+            "request": "launch",
+            "mainClass": "Week10.CarFactory",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Driver",
+            "request": "launch",
+            "mainClass": "Week10.Driver",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch EmployeeGenerator",
+            "request": "launch",
+            "mainClass": "Week10.EmployeeGenerator",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch GreetingsManager",
+            "request": "launch",
+            "mainClass": "Week10.GreetingsManager",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch LiteraryQuotations",
+            "request": "launch",
+            "mainClass": "Week10.LiteraryQuotations",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch MountainReport",
+            "request": "launch",
+            "mainClass": "Week10.MountainReport",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FootballManager",
+            "request": "launch",
+            "mainClass": "Week11.FootballManager",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Staff",
+            "request": "launch",
+            "mainClass": "Week12.Staff",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateStaff",
+            "request": "launch",
+            "mainClass": "Week13.CreateStaff",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch EBookReader",
+            "request": "launch",
+            "mainClass": "Week13.EBookReader",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnimalKingdom",
+            "request": "launch",
+            "mainClass": "Week14.AnimalKingdom",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch MethodOverloading",
+            "request": "launch",
+            "mainClass": "Week14.MethodOverloading",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ShapeFactory",
+            "request": "launch",
+            "mainClass": "Week14.ShapeFactory",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayLists",
+            "request": "launch",
+            "mainClass": "Week15.ArrayLists",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Library",
+            "request": "launch",
+            "mainClass": "Week15.Library",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Wrappers",
+            "request": "launch",
+            "mainClass": "Week15.Wrappers",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch MammalInt",
+            "request": "launch",
+            "mainClass": "Week16.MammalInt",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PayrollManager",
+            "request": "launch",
+            "mainClass": "Week16.PayrollManager",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CollectionExperiment",
+            "request": "launch",
+            "mainClass": "Week18.CollectionExperiment",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CompareEmployeeDemo",
+            "request": "launch",
+            "mainClass": "Week18.CompareEmployeeDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListDemos",
+            "request": "launch",
+            "mainClass": "Week18.ListDemos",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListExerciseStarter",
+            "request": "launch",
+            "mainClass": "Week18.ListExerciseStarter",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PersonListDemo",
+            "request": "launch",
+            "mainClass": "Week18.PersonListDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch PriorityQ",
+            "request": "launch",
+            "mainClass": "Week18.PriorityQ",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch SetDemo",
+            "request": "launch",
+            "mainClass": "Week18.SetDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch SwapDemo",
+            "request": "launch",
+            "mainClass": "Week18.SwapDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch AreaOfSquare",
+            "request": "launch",
+            "mainClass": "Week2.AreaOfSquare",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch KeyboardInputExample",
+            "request": "launch",
+            "mainClass": "Week2.KeyboardInputExample",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practical3Part1",
+            "request": "launch",
+            "mainClass": "Week2.Practical3Part1",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practical3Part2",
+            "request": "launch",
+            "mainClass": "Week2.Practical3Part2",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practical3Part3",
+            "request": "launch",
+            "mainClass": "Week2.Practical3Part3",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch RandomNumberGenerator",
+            "request": "launch",
+            "mainClass": "Week2.RandomNumberGenerator",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ScannerAgeExercise",
+            "request": "launch",
+            "mainClass": "Week2.ScannerAgeExercise",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch SquareRootCalculator",
+            "request": "launch",
+            "mainClass": "Week2.SquareRootCalculator",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch StaticClass",
+            "request": "launch",
+            "mainClass": "Week2.StaticClass",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Factorial",
+            "request": "launch",
+            "mainClass": "Week23.Factorial",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch MergeSortDemo",
+            "request": "launch",
+            "mainClass": "Week23.MergeSortDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecursionDemo",
+            "request": "launch",
+            "mainClass": "Week23.RecursionDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecursionExercise",
+            "request": "launch",
+            "mainClass": "Week23.RecursionExercise",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecursiveCountdown",
+            "request": "launch",
+            "mainClass": "Week23.RecursiveCountdown",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseString",
+            "request": "launch",
+            "mainClass": "Week23.ReverseString",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreadFactory",
+            "request": "launch",
+            "mainClass": "Week24.ThreadFactory",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch CompoundAssignmentDemo",
+            "request": "launch",
+            "mainClass": "Week3.CompoundAssignmentDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Factorial(1)",
+            "request": "launch",
+            "mainClass": "Week3.Factorial",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch InClassEncoder",
+            "request": "launch",
+            "mainClass": "Week3.InClassEncoder",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loops",
+            "request": "launch",
+            "mainClass": "Week3.Loops",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoopsGuessTheNumber",
+            "request": "launch",
+            "mainClass": "Week3.LoopsGuessTheNumber",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch MethodDemo",
+            "request": "launch",
+            "mainClass": "Week4.MethodDemo",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch MethodsPractical",
+            "request": "launch",
+            "mainClass": "Week4.MethodsPractical",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arrays",
+            "request": "launch",
+            "mainClass": "Week5.Arrays",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArraysPractical",
+            "request": "launch",
+            "mainClass": "Week5.ArraysPractical",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoDimensionalArrays",
+            "request": "launch",
+            "mainClass": "Week5.TwoDimensionalArrays",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoDimensionalArraysPractical",
+            "request": "launch",
+            "mainClass": "Week5.TwoDimensionalArraysPractical",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch TypeCasting",
+            "request": "launch",
+            "mainClass": "Week5.TypeCasting",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExerciseSortAndSave",
+            "request": "launch",
+            "mainClass": "Week9.ExerciseSortAndSave",
+            "projectName": "CSC7081 - Programming"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileReadingDemo",
+            "request": "launch",
+            "mainClass": "Week9.FileReadingDemo",
+            "projectName": "CSC7081 - Programming"
+        }
+    ]
+}
