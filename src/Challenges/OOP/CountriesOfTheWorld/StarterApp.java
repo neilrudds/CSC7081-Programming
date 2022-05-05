@@ -53,8 +53,8 @@ public class StarterApp {
     }
     
 	public static void showCountryAndRegionData(Collection<Country> countries) {
-		for (Country country : countries) {
-			country.displayRegionAndName();
+		for (Country c : countries) {
+			c.displayRegionAndName();
 		}
 	}
     

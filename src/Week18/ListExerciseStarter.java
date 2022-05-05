@@ -38,6 +38,8 @@ public class ListExerciseStarter {
      * @param toRemove
      */
     public static void removeMatches(List<Integer> inputList, List<Integer> toRemove) {
+    	
+    	// Does not handle duplicates
         /*for(Integer val : toRemove){
             while (inputList.contains(val)){
                 inputList.remove(val);
@@ -59,7 +61,7 @@ public class ListExerciseStarter {
     }
 
     public static void actuallyRemoveDuplicates2(List<Integer> toModify) {
-        Set<Integer> intSet = new HashSet<Integer>(toModify);
+        Set<Integer> intSet = new HashSet<Integer>(toModify); // Could use a LinkedHashSet to keep the ordering
         toModify.clear();
         toModify.addAll(intSet);
     }

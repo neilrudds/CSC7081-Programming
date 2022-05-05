@@ -71,7 +71,7 @@ public class Country {
     }
     public void setDensity() {
         if (population > 0 && area > 0) {
-            this.density = population / area;
+            this.density = (double)population / (double)area;
         } else {
             throw new IllegalArgumentException(String.format("Unable to calculate the density. Population: %d, Area: %d", population, area));
         }

@@ -1,7 +1,7 @@
 # CSC7081---Programming
-## Recursion
+## Recursion & StringBuilder
 
-> Week 23 focuses on recursion.
+> Week 23 focuses on recursion and StringBuilder.
 
 # Recursion - Introduction
 
@@ -339,3 +339,106 @@ System.out.println(nums.toString());
 ```
 
 - 8 Queens Problem... Look this up!
+
+# StringBuilder - A String but different
+
+The StringBuilder in Java represents a mutable sequence of characters. Since the String Class in Java creates an immutable sequence of characters, the StringBuilder
+class provides an alternative to String Class, as it creates a mutable sequence of characters.
+
+StringBuilder objects are like String objects, except that they can be modified. Internally, these objects are treated like variable-length arrays that contain a sequence of characters. At any point, the length and content of the sequence can be changed through method invocations.
+
+```
+    ------------------------------------------------------------------------------------------
+    Constructor                     | Description
+    ------------------------------------------------------------------------------------------
+    StringBuilder()                 | Creates an empty string builder with a capacity of 16
+                                    | (16 empty elements).
+    StringBuilder(CharSequence cs)  | Constructs a string builder containing the same characters
+                                    | as the specified CharSequence, plus an extra 16 empty
+                                    | elements trailing the CharSequence.
+    StringBuilder(int initCapacity) | Creates an empty string builder with the specified initial
+                                    | capacity.
+    StringBuilder(String s)         | Creates a string builder whose value is initialized by
+                                    | the specified string, plus an extra 16 empty elements
+                                    | trailing the string.
+```
+
+# Length and Capacity
+
+The StringBuilder class, like the String class, has a length() method that returns the length of the character sequence in the builder. Unlike strings, every string builder also has a capacity, the number of character spaces that have been allocated. The capacity, which is returned by the capacity() method, is always greater than or equal to the length (usually greater than) and will automatically expand as necessary to accommodate additions to the string builder.
+
+```
+// create an empty builder, capacity is 16
+StringBuilder sb = new StringBuilder();
+// adds 9 character string at the beginning
+sb.append("Greetings");
+// will produce a string builder with a length of 9 and a capacity of 16:
+System.out.println(sb);
+```
+# StringBuilder Operations
+
+The principal operations on a StringBuilder that are not available in String are the append() and insert() methods, which are overloaded so as to accept data of any type. Each converts its argument to a string and then appends or inserts the characters of that string to the character sequence in the string builder. The append method always adds these characters at the end of the existing character sequence, while the insert method adds the characters at a specified point.
+
+```
+StringBuilder sb = new StringBuilder();
+
+sb.append("Hello");
+sb.append(".");
+sb.append("Is there ");
+sb.append("anybody ");
+sb.append("out there");
+sb.append("?");
+System.out.println(sb); // Hello.Is there anybody out there?
+
+sb.insert(5, "Hola");
+System.out.println(sb); // Hello,Hola.Is there anybody out there?
+```
+# String vs StringBuilder
+
+ - Strings should always be used unless string builders:
+
+    - offer an advantage in terms of simpler code
+
+    - or better performance. For example, if you need to concatenate a large number of strings, appending to a StringBuilder object is more efficient.
+
+    - StringBuilder is very similar to StringBuffer – StringBuilder is usually faster but is not Threadsafe.
+
+# Challenge – reverse a string
+
+Using Strings only, create a program that will reverse a given string...
+
+```
+String palindrome = "Dot saw I was Tod";
+int length = palindrome.length();
+char[] tempCharArray = new char[length];
+char[] charArray = new char[length];
+        
+// put original string in an array of chars (HINT for loop)
+tempCharArray = palindrome.toCharArray();
+// reverse array of chars (HINT another for loop)
+for (int i = length; i > 0; i--) {
+    charArray[length - i] = tempCharArray[i - 1];
+}
+       
+// check if the original string was a palindrome
+String s = new String(charArray);
+if (palindrome.equalsIgnoreCase(s)) {
+    System.out.println("String is a palindrome.");
+} else {
+    System.out.println("String is NOT a palindrome.");
+    System.out.println(palindrome);
+    System.out.println(s);
+}
+```
+
+- Now with a StringBuilder – less complex
+
+```
+String palindrome = "Dot saw I was Tod";
+
+StringBuilder sb = new StringBuilder(palindrome);
+
+sb.reverse(); // reverse it
+
+System.out.println(sb)
+```

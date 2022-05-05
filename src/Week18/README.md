@@ -859,6 +859,7 @@ public class PriorityQ {
   - The HashMap class is roughly equivalent to Hashtable, except that the HashMap is unsynchronized and permits nulls.
 
 - Creating a HashMap and adding a key value pair:
+
 ```
 String sentence = "to be or not to be";
 
