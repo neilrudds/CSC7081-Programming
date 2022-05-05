@@ -175,6 +175,9 @@ class TestTopTrumpCard {
 	void testSetBio() {
 		TopTrumpCard ttc = new TopTrumpCard();
 		
+		String expectedEmpty = "The bio must be more than 0 characters in length"
+;
+		
 		// Valid
 		ttc.setBio(bioValid);
 		assertEquals(bioValid, ttc.getBio());
@@ -183,9 +186,12 @@ class TestTopTrumpCard {
 	    assertThrows(NullPointerException.class, () -> {
 	       ttc.setBio(null);
 	    });
-	    assertThrows(IllegalArgumentException.class, () -> {
+	    
+	    // Invalid, check the IllegalArgumentException message text
+	    Exception exp = assertThrows(IllegalArgumentException.class, () -> {
 		   ttc.setBio("");
 		});
+		assertEquals(expectedEmpty, exp.getMessage());
 	}
 	
 	@Test
