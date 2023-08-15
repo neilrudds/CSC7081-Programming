@@ -1,4 +1,4 @@
-# CSC7081---Programming
+# CSC7081-Programming
 
 This module will introduce foundational elements of computing for students that are studying the Pg Cert in SD and MSc SD..  It provides detailed introductions to areas in:
 
